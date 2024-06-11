@@ -1,0 +1,863 @@
+/* NavBar.css */
+/* General styling */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the components horizontally */
+}
+
+.components-container {
+  display: flex;
+  flex-direction: row;
+}
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  /* Default styles for the image */
+.img-container {
+    width: 100%; /* Full width */
+    max-width: none; /* Disable max width */
+    height: 300px; /* Fixed height */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    /* Adjust the image size for smaller screens */
+    .img-container {
+      height: auto; /* Auto height */
+      max-width: 100%; /* Adjust width to fit smaller screens */
+    }
+  }
+  
+  .card-container {
+    max-width: 800px;
+    background-color: red;
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    margin: 20px; /* Margin around the card */
+  }
+  
+  .card-container nav ul {
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align the list items horizontally */
+  }
+  
+  .card-container nav ul li {
+    color: white; /* Text color */
+    font-size: 18px; /* Font size */
+    padding: 10px; /* Padding around each list item */
+    text-align: center; /* Center align the text */
+    margin: 0 5px; /* Add some margin between list items */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .card-container {
+      padding: 10px; /* Reduce padding for smaller screens */
+      background-color:rgb(34, 40, 84); /* Remove background color */
+    }
+  
+    .card-container nav ul {
+      flex-direction: column; /* Display list items vertically on smaller screens */
+      align-items: center; /* Center align the list items vertically */
+    }
+  }
+  
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  aside.menu {
+    background-color: rgb(34, 40, 84);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 20%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-container {
+    border-radius: 1px solid #ddd;
+    width: 55%;
+    
+    
+  }
+  .lili{
+    height: 35px;
+  }
+  .table1{
+    padding-top: 40px;
+   padding-right: 40px;
+    padding-left: 40px;
+    border-radius: 1px solid #ddd;
+    
+  }
+  
+  aside.bets {
+    background-color:rgb(34, 40, 84);
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color:#090f1e;
+    border-radius: 1px solid #ddd;
+  }
+  
+  th, td {
+    
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: #090f1e;
+    height: 50px;
+  }
+  
+  th {
+    background-color: #090f1e;
+    height: 50px;
+    border-radius: 1px solid #ddd;
+    
+  }
+  
+  td {
+    cursor: pointer;
+    background-color: #090f1e;
+    height: 50px;
+    border-radius: 1px solid #ddd;
+  }
+  
+  td:hover {
+    background-color: rgb(34, 40, 84);
+    color: white;
+    border-radius: 1px solid #ddd;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    aside.menu, .table-container, aside.bets {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  
+.header-area {
+    background-color: rgb(34, 40, 84);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px 0;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h4 {
+    margin: 0;
+    color: #fff;
+  }
+  
+  .nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav li {
+    margin-left: 20px;
+  }
+  
+  .nav li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .menu-trigger {
+    display: none;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .main-nav {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+    }
+  
+    .nav.open {
+      display: flex;
+    }
+  
+    .nav li {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .menu-trigger {
+      display: block;
+    }
+  }
+
+  
+
+
+
+  
+.sidebar1 p {
+    font-weight: bold;
+  }
+  
+  .sidebar1 ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar1 ul ul {
+    margin-top: 10px;
+  }
+  
+  .sidebar1 li {
+    margin-bottom: 10px;
+  }
+  
+  .sidebar1 li > ul {
+    margin-left: 20px;
+  }
+  
+  .sidebar1 li > ul > li {
+    font-style: italic;
+  }
+  
+   
+   .pariebody {
+    background-color: #f1f1f1; /* Set background color for the pariebar */
+    padding: 10px;
+   
+    margin-left: 1200px;
+  }
+  
+  .pariebody aside {
+    background-color: #fff; /* Set background color for the sidebar */
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .pariebody aside div {
+    color: #000; /* Set text color for the name */
+  }
+  
+  .pariebody aside div span {
+    color: rgb(20, 18, 18); /* Set text color for the number */
+    background-color: #f1f1f1;
+    
+  }
+  
+  .table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    width: 800px;
+    margin-left: 340px;
+    
+  }
+  .table-wrapper1{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+    width: 800px;
+   
+  }
+  
+  .fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+  }
+  
+  .fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+  }
+  
+  .fl-table thead th {
+    color: #ffffff;
+    background: rgb(34, 40, 84);
+  }
+  
+  
+  .fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+  }
+  
+  .fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+  }
+  
+  /* Responsive */
+  
+  @media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+       
+        border-right: 1px solid #e42020;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+  } 
+
+
+
+  .container2 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+  }
+  
+  .container22 {
+    padding-top: 130px;
+    max-width: 875px;
+    margin: 0 auto;
+  }
+  
+  .cardfix {
+    margin-top: 150px;
+  }
+  
+  /* Navigation styling */
+  .main-nav2 {
+    border-radius: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(30deg,red, red);
+    padding: 10px 20px;
+  }
+  
+  .main-nav2 .logo2 {
+    color: white;
+  }
+  
+  .main-nav2 .logo2 h4 {
+    margin: 0;
+  }
+  
+  .main-nav2 .logo2 span {
+    color: #ff4d61; /* Optional: change the color of "Dyna" */
+  }
+  
+  .main-nav2 .nav2 {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .main-nav2 .nav2 li {
+    margin: 0 15px;
+  }
+  
+  .main-nav2 .nav2 li a {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .main-nav2 .nav2 li a:hover,
+  .main-nav2 .nav2 li a.active1 {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .main-nav2 .main-red-button2 a {
+    background-color: yellow; /* Optional: change the button color */
+    color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+  
+  .main-nav2 .menu-trigger2 {
+    display: none; /* Hide menu trigger on larger screens */
+  }
+  
+  /* Responsive design: Show menu trigger on smaller screens */
+  @media (max-width: 768px) {
+    .main-nav2 {
+      flex-direction: column;
+      align-items: flex-start;
+      background: linear-gradient(30deg, red, red);
+      padding: 10px 20px;
+    }
+  
+    .main-nav2 .nav2 {
+      flex-direction: column;
+      width: 100%;
+      display: none;
+      background: linear-gradient(30deg,red, red);
+      border-radius: 2%;
+    }
+  
+    .main-nav2 .nav2.open {
+      display: flex;
+    }
+  
+    .main-nav2 .nav2 li {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .main-nav2 .menu-trigger2 {
+      display: block;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 10px; /* Space between the menu trigger and the nav items */
+    }
+  }
+  .games-container {
+   
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+    justify-content: space-around; /* To evenly distribute the cards */
+  }
+  
+  .game {
+    width: 400px;
+    height: 400px;
+    background-color: #f9f9f9; /* Light background for the cards */
+    border: 1px solid #ddd; /* Light border around the cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: calc(33.333% - 20px); /* 3 cards per row with space in between */
+    box-sizing: border-box; /* Ensure padding/border included in width */
+    padding: 15px; /* Inner padding */
+    text-align: center; /* Center the text and images */
+  }
+  
+  .game img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Keep the aspect ratio of images */
+    border-radius: 4px; /* Slight rounding of image corners */
+  }
+  
+  @media (max-width: 768px) {
+    .game {
+      width: calc(50% - 20px); /* 2 cards per row on smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .game {
+      width: 100%; /* 1 card per row on very small screens */
+    }
+  }
+  /* src/components/Login.css */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.login-form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.login-form div {
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #45a049;
+}
+
+.message {
+  margin-top: 20px;
+  text-align: center;
+  color: #ff0000;
+}
+.container14 {
+  padding: 20px;
+}
+
+.slip-bets-grid14 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 1440px;
+  
+  
+}
+
+.bet-card14 {
+  background-color: rgb(34, 40, 84);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  color: white; /* Ensure text is black */
+}
+
+.bet-card14 h2 {
+  margin-bottom: 10px;
+}
+
+.bet-card14 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+}
+
+.bet-card14 p {
+  margin: 5px 0;
+}
+
+@media (max-width: 1024px) {
+  .slip-bets-grid14 {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .slip-bets-grid14 {
+      grid-template-columns: 1fr;
+  }
+}
+.bets {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+}
+
+.bets-header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.bet-card {
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.bet-card .fa-dot-circle-o {
+  margin-right: 10px;
+}
+
+.bet-details {
+  background-color: white;
+}
+
+.bet-value {
+  background-color: white;
+  color: #333;
+  font-weight: bold;
+}
+
+.bet-summary {
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.bet-result,
+.bet-multiplied-result,
+.bet-bonus-percentage,
+.bet-final-result {
+  color: black;
+}
+
+.bet-input {
+  margin-left: 10px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.bet-button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bet-button:hover {
+  background-color: #0056b3;
+}
+/* AddUser.css */
+.card {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.card h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.card form div {
+  margin-bottom: 1rem;
+}
+
+.card form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.card form input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.card form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.card form button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+}
+
+.message.success {
+  color: green;
+}
+
+.message.error {
+  color: red;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Ensures no double borders */
+}
+
+th, td {
+  border-right: 1px solid white; /* Adds a white line to the right of each cell */
+  padding: 8px;
+  text-align: center;
+}
+
+th:last-child, td:last-child {
+  text-align: center;
+  border-right: none; /* Removes the border from the last cell in each row */
+}
+
+tbody tr {
+ 
+  border-bottom: 1px solid white; /* Optional: Adds a white line between rows */
+}
+
+tbody tr:last-child {
+ 
+  border-bottom: none; /* Removes the border from the last row */
+}
+
+table, th, td {
+  color: white; /* Example text color */
+}
+.fifo{
+  text-align: center;
+}
+.table2{
+  width: 1000px;
+}
+.hih-container {
+  display: flex;
+}
+
+
+
+.hih-table-container {
+  flex-grow: 1;
+  padding: 20px;
+  width: 800px; /* Adjust as needed */
+}
+
+.hih-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hih-table-container th, .hih-table-container td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.hih-fifo {
+  cursor: pointer;
+}
+
+.hih-fifo:hover {
+  background-color: rgb(34, 40, 84);
+}
+
