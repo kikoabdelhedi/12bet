@@ -93,13 +93,6 @@ body {
   .lili{
     height: 35px;
   }
-  .table1{
-    padding-top: 40px;
-   padding-right: 40px;
-    padding-left: 40px;
-    border-radius: 1px solid #ddd;
-    
-  }
   
   aside.bets {
     background-color:rgb(34, 40, 84);
@@ -861,3 +854,83 @@ table, th, td {
   background-color: rgb(34, 40, 84);
 }
 
+.table1 {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scroll if needed */
+}
+
+.table1 table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table1 th, .table1 td {
+  padding: 8px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.fifo {
+  border: 1px solid #ddd;
+}
+
+.table1 thead th {
+  border-bottom: 2px solid #ddd; /* Add line between headers and data */
+}
+
+.table1 td {
+  padding-top: 12px; /* Add small space between header and data */
+  padding-bottom: 12px; /* Add small space between header and data */
+}
+
+@media (max-width: 768px) {
+  .table1 table, 
+  .table1 thead, 
+  .table1 tbody, 
+  .table1 th, 
+  .table1 td, 
+  .table1 tr {
+    display: block;
+  }
+
+  .table1 thead tr {
+    display: none;
+  }
+
+  .table1 tr {
+    border-bottom: 2px solid #ddd; /* Add line between rows */
+  }
+
+  .table1 td {
+    text-align: left;
+    padding-left: 10px; /* Adjust padding */
+    padding-right: 10px; /* Adjust padding */
+    position: relative;
+    margin-top: 10px; /* Add space between headers and data */
+  }
+
+  .table1 td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 100%; /* Fill the entire cell width */
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .table1 td:nth-child(1) { /* Target the first column */
+    width: 40%; /* Adjust the width for larger case of the name */
+  }
+
+  .table1 td:nth-child(2), /* Target the second column */
+  .table1 td:nth-child(3), /* Target the third column */
+  .table1 td:nth-child(4) { /* Target the fourth column */
+    font-size: 16px; /* Increase font size for score and time */
+  }
+
+  .table1 th, .table1 td {
+    padding: 6px; /* Reduce padding for better spacing */
+  }
+}

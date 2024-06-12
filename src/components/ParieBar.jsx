@@ -108,7 +108,7 @@ function ParieBar() {
       <ul>
         {sportsData.map((sport) => (
           <li key={sport.id}>
-            <strong onClick={() => handleSportSelect(sport.id)}>{sport.name}</strong>
+            <strong  onClick={() => handleSportSelect(sport.id)}>{sport.name}</strong>
             {selectedSport === sport.id && (
               <ul>
                 {sport.catIds.map((catId) => {

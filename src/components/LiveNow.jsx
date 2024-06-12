@@ -76,43 +76,42 @@ function LiveNow() {
   
   return (
     <div className="table1">
-      <table>
-        <thead>
-          <tr>
-            <th>💢 Live Now</th>
+    <table>
+      <thead>
+        <tr>
+          <th>💢 Live Now</th>
+          {headers.map(header => (
+            <th key={header.typeId} className='fifo'>{header.label}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {eventLiveNowData.map(event => (
+          <tr className='fifo' key={event.id}>
+            <td>
+              🔥 {event.name} <br />
+              ⏳ {event.liveTime} <br />
+              Score: {event.score.join(' ')}
+            </td>
             {headers.map(header => (
-              <th key={header.typeId} className='fifo'>{header.label}</th>
+              <td
+                className='fifo'
+                key={header.typeId}
+                data-label={header.label}
+                onClick={() => handleCellClick(
+                  event.name,
+                  header.label,
+                  getOddsLiveNowByMarketIdAndTypeId(event.marketIds, header.typeId)
+                )}
+              >
+                {getOddsLiveNowByMarketIdAndTypeId(event.marketIds, header.typeId)}
+              </td>
             ))}
           </tr>
-        </thead>
-        <tbody>
-          {eventLiveNowData.map(event => (
-            <tr className='fifo' key={event.id}>
-              <td>
-                🔥 {event.name} <br />
-                ⏳ {event.liveTime} <br />
-                Score: {event.score.join(' ')}
-              </td>
-              {headers.map(header => (
-                <td
-                  className='fifo'
-                  key={header.typeId}
-                  onClick={() => handleCellClick(
-                    event.name,
-                    header.label,
-                    getOddsLiveNowByMarketIdAndTypeId(event.marketIds, header.typeId)
-                  )}
-                >
-                  {getOddsLiveNowByMarketIdAndTypeId(event.marketIds, header.typeId)}
-                </td>
-              ))}
-            </tr>
-          ))}
-         
-
-        </tbody>
-      </table>
-    </div>
+        ))}
+      </tbody>
+    </table>
+  </div>
   );
 }
 

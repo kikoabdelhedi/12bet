@@ -57,9 +57,9 @@ const App = () => {
            
             <Route path="/AddUser" element={<AddUser />} />
             <Route path="/SlipBets" element={<SlipBets />} />
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/SlotMachine" element={<SlotMachine />} />
+            <Route path="/" element={<SlotMachine />} />
           </Routes>
         </div>
       </Router>
