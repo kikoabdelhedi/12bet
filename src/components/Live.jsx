@@ -18,7 +18,7 @@ function Live() {
         
         // Make POST request to save event data
         try {
-          const response = await fetch('http://localhost:4000/api/events', {
+          const response = await fetch('https://back-jcpa.onrender.com/api/events', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

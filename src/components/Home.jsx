@@ -85,7 +85,7 @@ function Home() {
     const totalwin = finalResultWithBonus;
     const login = userBets;
     try {
-      const response = await axios.post('http://localhost:4000/api/addSlipBet', {
+      const response = await axios.post('https://back-jcpa.onrender.com/api/addSlipBet', {
         match_info,
         price,
         userid,

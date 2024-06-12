@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 
-axios.defaults.baseURL = 'http://localhost:4000'; // Set your server's base URL
+axios.defaults.baseURL = 'https://back-jcpa.onrender.com'; // Set your server's base URL
 
 const Login = () => {
   const [login, setLogin] = useState('');

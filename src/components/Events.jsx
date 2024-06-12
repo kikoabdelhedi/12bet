@@ -14,7 +14,7 @@ function Events() {
     const fetchAllEvents = async () => {
       setLoading(true);
       try {
-        const response = await axios.get('http://localhost:4000/api/events');
+        const response = await axios.get('https://back-jcpa.onrender.com/api/events');
         const events = response.data;
         setAllEvents(events);
       } catch (err) {

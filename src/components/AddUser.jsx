@@ -13,7 +13,7 @@ const AddUser = () => {
         setError(null);
 
         try {
-            const response = await fetch('http://localhost:4000/api/users', {
+            const response = await fetch('https://back-jcpa.onrender.com/api/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
