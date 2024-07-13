@@ -1,0 +1,90 @@
+.bet-games-container {
+  position: fixed;
+  bottom: 20px; /* Adjust bottom position as needed */
+  right: 20px; /* Adjust right position as needed */
+  width: 300px; /* Adjust width as needed */
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000; /* Ensure it overlays other content */
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+.bet-games-container.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.bets {
+  position: fixed;
+  bottom: 20px; /* Adjust bottom position as needed */
+  right: 20px; /* Adjust right position as needed */
+  z-index: 1000; /* Ensure it overlays other content */
+}
+
+.bets-header {
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.bets-header:focus {
+  outline: none;
+}
+
+.bets-content {
+  max-height: 300px; /* Example height; adjust as needed */
+  overflow-y: auto;
+}
+
+.bet-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.delete-event-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: red;
+  margin-left: 10px;
+}
+
+.bet-value {
+  flex-grow: 1;
+}
+
+.bet-input {
+  width: 50px;
+  margin-left: 10px;
+}
+
+.bet-summary {
+  margin-top: 20px;
+}
+
+.bet-summary p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .bet-games-container {
+    width: calc(100% - 40px);
+    left: 20px;
+    right: 20px;
+  }
+}

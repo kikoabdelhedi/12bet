@@ -1,0 +1,56 @@
+.selected-odd {
+  background-color: gray;
+  color: yellow; /* Optional: Change text color for better contrast */
+}
+.one-event {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.one-event h1.competitors {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.market {
+  margin-top: 20px;
+  background-color: #e9ecef;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.market span {
+  cursor: pointer;
+  font-weight: bold;
+  color: black;
+}
+
+.odds-table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+.odds-table th,
+.odds-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #dee2e6;
+}
+
+
+.odds-table tr:hover {
+  background-color: gray;
+  color: yellow; /* Optional: Change text color for better contrast */
+}
+
+.odds-table .selected-odd {
+  background-color: yellow;
+  font-weight: bold;
+}

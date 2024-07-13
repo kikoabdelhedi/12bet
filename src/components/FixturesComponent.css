@@ -1,0 +1,140 @@
+.green-background {
+    background-color: green;
+    color: white; /* Optionally change text color */
+}
+
+.red-background {
+    background-color: red;
+    color: white; /* Optionally change text color */
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.bet-card14 {
+    box-shadow: 0 4px 8px rgba(239, 234, 145, 0.1);
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.bet-card14:hover {
+    transform: translateY(-5px);
+ 
+}
+
+.bet-details {
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.bet-detail {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+}
+
+.bet-detail:first-child {
+    margin-left: 0;
+}
+
+.bet-detail:last-child {
+    margin-right: 0;
+}
+.bet-value{
+   flex: 1;
+}
+.slip-bet-detail {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #101922;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slip-bet-detail h1,
+.slip-bet-detail h2 {
+    text-align: center;
+  
+    margin-bottom: 20px;
+}
+
+.slip-bet-detail ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slip-bet-detail li {
+  
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.slip-bet-detail li:hover {
+    transform: translateY(-2px);
+}
+
+.slip-bet-detail .match-info {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.slip-bet-detail .match-info span {
+    display: block;
+}
+
+.slip-bet-detail p {
+ 
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+.item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.item .team-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.item .info {
+    font-size: 16px;
+}
+
+.item .cote {
+    font-weight: bold;
+    color:black; /* Blue color for odds */
+}
+
+.item .type {
+    font-style: italic;
+}
+
+
