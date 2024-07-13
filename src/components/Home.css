@@ -1,0 +1,46 @@
+/* CSS for the SliderComponent */
+.home{
+background-color: white;
+}
+.main-container {
+    padding: 20px;
+    background-color: white;
+  }
+  .user{
+    background-color: white;
+  }
+  .mobile-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* Ensure content does not overflow */
+  }
+  
+  .sports-slider {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden; /* Ensure content does not overflow */
+  }
+  
+  .slider-item {
+    position: relative; /* Ensure proper positioning */
+    height: 25vh; /* Set height to 25% of the viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px; /* Adjust the space between images */
+  }
+  
+  .custom-slider-img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    max-height: 100%; /* Ensure image does not exceed container height */
+    object-fit: cover; /* Maintain aspect ratio and fill the container */
+  }
+  
+  @media (max-width: 768px) {
+    .mobile-container {
+      padding: 0 10px;
+    }
+  }
+  

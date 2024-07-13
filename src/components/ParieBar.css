@@ -1,0 +1,64 @@
+.selected-odd {
+  background-color: gray;
+  color:yellow; /* Optional: Change text color for better contrast */
+}
+.parie-bar-container {
+  width: 70%;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex; /* Ensure it's a flex container */
+  align-items: stretch; /* Stretch items vertically */
+}
+
+aside {
+  width: 30%; /* Width for the aside */
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-right: 1px solid #ddd;
+  flex-shrink: 0; /* Prevent aside from shrinking */
+}
+
+.main-content {
+  flex-grow: 1; /* Take remaining space */
+  padding-left: 20px; /* Adjust padding as needed */
+}
+
+table {
+  width: 100%; /* Table width 100% of its container */
+  border-collapse: collapse;
+  /* Increase width for the table */
+  width: 90%; /* Example width adjustment */
+  margin: 20px auto; /* Centering the table */
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Example padding adjustment */
+  text-align: center;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+@media (max-width: 768px) {
+  .parie-bar-container {
+    flex-direction: column; /* Stack items vertically on small screens */
+  }
+
+  aside {
+    width: 100%; /* Full width for aside on small screens */
+    border-right: none; /* Remove right border on small screens */
+    border-bottom: 1px solid #ddd; /* Example border adjustment */
+  }
+}
