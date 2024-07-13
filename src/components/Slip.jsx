@@ -15,7 +15,7 @@ function Slip() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://192.168.1.239:4000/api/slipbets');
+                const response = await axios.get('https://back-jcpa.onrender.com/api/slipbets');
                 setSlipBets(response.data);
                 setLoading(false);
             } catch (error) {

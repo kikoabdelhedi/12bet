@@ -1703,7 +1703,7 @@ const MatchDetail = () => {
 //     if (outcome === true) {
 //         setLoading(true);
 
-//         fetch('http://localhost:4000/update-match-info', {
+//         fetch('https://back-jcpa.onrender.com/update-match-info', {
 //             method: 'PUT',
 //             headers: {
 //                 'Content-Type': 'application/json'

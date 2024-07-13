@@ -7,7 +7,7 @@ import data0 from '../data0';
 import BetGames from './BetGames'; // Move this import to the top
 import './LiveNow.css';
 import './Login.css';
-axios.defaults.baseURL = 'http://192.168.1.239:4000'; // Set your server's base URL
+axios.defaults.baseURL = 'https://back-jcpa.onrender.com'; // Set your server's base URL
 
 // Your component code here
 
