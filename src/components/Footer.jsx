@@ -19,10 +19,10 @@ function Footer() {
               </div>
               <div className="col-12 col-lg-4 flex-unordered footer-copyright">
                 <div className="footer-copyright-top">
-                  <b>Copyright © 2024 koora-bet365. All Rights Reserved.2024</b>
+                  <b>Copyright © 2024 12-bet365. All Rights Reserved.2024</b>
                 </div>
                 <p>
-                  Date 16/May/2024
+                  Date 23/Mars/2024
                   <br />
                   <br />
                 </p>
