@@ -291,7 +291,7 @@ const Login = () => {
                 <div className="col-12 d-flex">
                   <ul className="nav navigation-main align-items-center">
                     <li className="nav-item">
-                      <img className='im' src='https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,w_150/v1718367699/Koora-bet-365-removebg-preview_hrygyw.png' alt="logo" />
+                      <img className='im' src='https://res.cloudinary.com/dqmhtibfm/image/upload/c_scale,h_150,w_150/v1720914620/Koora-bet-365_1_xqs4vn.png' alt="logo" />
                     </li>
                     <li>
                       <form className="login-form" onSubmit={handleSubmit}>
