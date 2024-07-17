@@ -94,37 +94,37 @@ const OneEvent = () => {
 
   const { formattedDate, formattedTime } = formatDateAndTime(startDate);
 
-  const handleCellClick = (eventName, headerType, value, startDate, marketId, typeId, eventId, idx) => {
-    const { formattedDate, formattedTime } = formatDateAndTime(startDate);
-    const selectedMarket = '1x2';
-    setSelectedOddIndex(idx);
+ const handleCellClick = (eventName, headerType, value, startDate, marketId, typeId, eventId, idx) => {
+  const { formattedDate, formattedTime } = formatDateAndTime(startDate);
+  const selectedMarketNames = selectedMarket ? [selectedMarket.shortName] : [];
+  setSelectedOddIndex(idx);
 
-    const existingEventIndex = selectedEvents.findIndex(event => event.nameCom === eventName);
+  const existingEventIndex = selectedEvents.findIndex(event => event.nameCom === eventName);
 
-    if (existingEventIndex !== -1) {
-      const updatedEvents = [...selectedEvents];
-      updatedEvents[existingEventIndex] = {
-        ...selectedEvents[existingEventIndex],
-        name: headerType,
-        idx: value,
-        formattedDate,
-        formattedTime,
-        selectedMarket,
-      };
+  if (existingEventIndex !== -1) {
+    const updatedEvents = [...selectedEvents];
+    updatedEvents[existingEventIndex] = {
+      ...selectedEvents[existingEventIndex],
+      name: headerType,
+      idx: value,
+      formattedDate,
+      formattedTime,
+      selectedMarket: selectedMarketNames,
+    };
 
-      setSelectedEvents(updatedEvents);
-    } else {
-      setSelectedEvents(prevEvents => [
-        ...prevEvents,
-        { nameCom: eventName, name: headerType, idx: value, formattedDate, formattedTime, selectedMarket }
-      ]);
-    }
+    setSelectedEvents(updatedEvents);
+  } else {
+    setSelectedEvents(prevEvents => [
+      ...prevEvents,
+      { nameCom: eventName, name: headerType, idx: value, formattedDate, formattedTime, selectedMarket: selectedMarketNames }
+    ]);
+  }
 
-    setSelectedOdd(prevSelectedOdds => ({
-      ...prevSelectedOdds,
-      [eventId]: { marketId, typeId }
-    }));
-  };
+  setSelectedOdd(prevSelectedOdds => ({
+    ...prevSelectedOdds,
+    [eventId]: { marketId, typeId }
+  }));
+};
 
   return (
     <div className="one-event">
